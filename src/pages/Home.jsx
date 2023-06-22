@@ -1,11 +1,16 @@
 import { useCounterContext } from '../hooks/useCounterContext';
+import { useTitleColorContext } from '../hooks/useTitleColorContext';
 
 const Home = () => {
   const { counter, setCounter } = useCounterContext();
 
+  const { color } = useTitleColorContext()
+
+  console.log(color);
+
   return (
     <div>
-      <h2>
+      <h2 style={{ color: color }}>
         Home
       </h2>
       <p>
